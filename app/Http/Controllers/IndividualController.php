@@ -12,6 +12,11 @@ class IndividualController extends Controller
         return $this->success(Individual::all());
     }
 
+    public function detail(Request $request, Individual $individual)
+    {
+        return $this->success($individual);
+    }
+
     public function create(Request $request)
     {
         $data = $this->validate($request, [
